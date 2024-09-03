@@ -23,6 +23,7 @@ The goal is to provide clear and efficient solutions with explanations to help o
 
 ## Example Structure
 
+```plaintext
 .
 ├── Arrays/
 │   ├── Easy/
@@ -37,4 +38,5 @@ The goal is to provide clear and efficient solutions with explanations to help o
 │   └── Medium/
 │       └── Add_Two_Numbers.py
 ...
+
 
