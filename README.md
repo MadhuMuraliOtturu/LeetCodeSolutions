@@ -19,3 +19,20 @@ The goal is to provide clear and efficient solutions with explanations to help o
 1. **Navigate by Topic:** Go to the folder corresponding to the topic you're interested in.  
 2. **Select Difficulty:** Choose a problem based on its difficulty level.  
 3. **Review Solution:** Open the solution file to view the code and read the explanations.
+
+
+## Example Structure
+
+-├── Arrays/
+-│   ├── Easy/
+-│   │   └── Two_Sum.py
+-│   ├── Medium/
+-│   │   └── Longest_Substring_Without_Repeating_Characters.py
+-│   └── Hard/
+-│       └── Median_of_Two_Sorted_Arrays.py
+-├── LinkedLists/
+-│   ├── Easy/
+-│   │   └── Merge_Two_Sorted_Lists.py
+-│   └── Medium/
+-│       └── Add_Two_Numbers.py
+-...
