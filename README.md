@@ -13,3 +13,9 @@ The goal is to provide clear and efficient solutions with explanations to help o
   - **Code:** The solution itself.  
   - **Comments:** Inline comments explaining the key parts of the code.  
   - **Time and Space Complexity:** An analysis of the solution’s performance.
+
+## How to Use
+
+1. **Navigate by Topic:** Go to the folder corresponding to the topic you're interested in.  
+2. **Select Difficulty:** Choose a problem based on its difficulty level.  
+3. **Review Solution:** Open the solution file to view the code and read the explanations.
