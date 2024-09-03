@@ -23,16 +23,18 @@ The goal is to provide clear and efficient solutions with explanations to help o
 
 ## Example Structure
 
--├── Arrays/
--│   ├── Easy/
--│   │   └── Two_Sum.py
--│   ├── Medium/
--│   │   └── Longest_Substring_Without_Repeating_Characters.py
--│   └── Hard/
--│       └── Median_of_Two_Sorted_Arrays.py
--├── LinkedLists/
--│   ├── Easy/
--│   │   └── Merge_Two_Sorted_Lists.py
--│   └── Medium/
--│       └── Add_Two_Numbers.py
--...
+.
+├── Arrays/
+│   ├── Easy/
+│   │   └── Two_Sum.py
+│   ├── Medium/
+│   │   └── Longest_Substring_Without_Repeating_Characters.py
+│   └── Hard/
+│       └── Median_of_Two_Sorted_Arrays.py
+├── LinkedLists/
+│   ├── Easy/
+│   │   └── Merge_Two_Sorted_Lists.py
+│   └── Medium/
+│       └── Add_Two_Numbers.py
+...
+
