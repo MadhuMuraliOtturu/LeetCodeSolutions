@@ -1,0 +1,23 @@
+# Problem: Minimum Bit Flips to Convert Start to Goal
+# Description: Given two integers `start` and `goal`, find the minimum number of bit flips required
+# to convert `start` to `goal`. A bit flip changes a '0' to a '1' or vice versa.
+
+class Solution(object):
+    def minBitFlips(self, start, goal):
+        """
+        Computes the minimum number of bit flips to convert `start` to `goal`.
+
+        :param start: Integer, the starting integer.
+        :param goal: Integer, the target integer.
+        :return: Integer, the minimum number of bit flips.
+        """
+        flip = bin(start ^ goal)
+        return flip.count('1')
+
+## Time Complexity: O(N), where N is the number of bits in the binary representation of the integers.
+## Space Complexity: O(1), constant space used.
+
+# Example usage:
+# solution = Solution()
+# print(solution.minBitFlips(10, 7))  
+# Expected output: 3, since converting 1010 (10 in binary) to 0111 (7 in binary) requires 3 flips.
