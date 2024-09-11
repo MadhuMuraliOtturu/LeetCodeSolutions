@@ -1,0 +1,44 @@
+# Problem: Sort Vowels in a String
+# Description: Given a string `s`, sort the vowels in the string in ascending order, while leaving the consonants in their original positions.
+
+class Solution(object):
+    def sortVowels(self, s):
+        """
+        Sorts the vowels in the input string `s` while keeping the consonants in their original positions.
+
+        :param s: String, the input string to sort vowels.
+        :return: String, the modified string with vowels sorted in ascending order.
+        """
+        s = list(s)
+        ind = []  # To store the indices of vowels in the string
+        vow = []  # To store the vowels found in the string
+        vowels = 'AEIOUaeiou'
+        
+        # Step 1: Identify the vowels and their indices
+        for i in range(len(s)):
+            if s[i] in vowels:
+                ind.append(i)
+                vow.append(s[i])
+        
+        # Step 2: Sort the vowels in ascending order
+        vow.sort()
+        
+        # Step 3: Replace the vowels in their original positions
+        a = 0
+        b = 0
+        while a < len(ind) and b < len(vow):
+            s[ind[a]] = vow[b]
+            a += 1
+            b += 1
+        
+        # Step 4: Return the final string after sorting the vowels
+        return "".join(s)
+
+## Time Complexity: O(N log N), where N is the length of the string `s`. Sorting the vowels takes O(N log N).
+## Space Complexity: O(N), as additional space is required to store indices and vowels.
+
+# Example usage:
+# solution = Solution()
+# s = "hello world"
+# print(solution.sortVowels(s))  
+# Expected output: "holle werld"
