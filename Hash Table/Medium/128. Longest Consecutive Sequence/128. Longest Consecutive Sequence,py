@@ -1,0 +1,37 @@
+# Problem: Longest Consecutive Sequence
+# Description: Given an unsorted array of integers `nums`, the task is to find the length of the 
+# longest consecutive elements sequence. This solution must run in O(n) time complexity.
+
+class Solution(object):
+    def longestConsecutive(self, nums):
+        """
+        Finds the length of the longest consecutive elements sequence in an unsorted array.
+        
+        :param nums: List of integers.
+        :return: Integer, the length of the longest consecutive sequence.
+        """
+        nums = set(nums)
+        co = 0
+        
+        for i in nums:
+            x = 0
+            val = i
+            
+            # Check if `val-1` is not in the set, meaning `val` is the start of a sequence
+            if val - 1 not in nums:
+                while val in nums:
+                    x += 1
+                    val += 1
+            
+            co = max(co, x)
+            
+        return co
+
+# Time Complexity: O(n), where n is the number of elements in `nums`.
+# We iterate over each element and only perform operations on the start of a sequence.
+# Space Complexity: O(n), where n is the space required to store the set of unique elements from `nums`.
+
+# Example usage:
+# solution = Solution()
+# nums = [100, 4, 200, 1, 3, 2]
+# print(solution.longestConsecutive(nums))  # Expected output: 4 (sequence: 1, 2, 3, 4)
