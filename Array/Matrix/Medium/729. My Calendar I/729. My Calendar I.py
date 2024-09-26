@@ -36,3 +36,45 @@ class MyCalendar:
 # print(my_calendar.book(10, 20))  # Expected output: True, since it is the first booking.
 # print(my_calendar.book(15, 25))  # Expected output: False, as it overlaps with the previous booking.
 # print(my_calendar.book(20, 30))  # Expected output: True, as it does not overlap with any existing booking.
+
+
+
+#OPTIMIZED SOLUTION WITHOUT USING SORTING 
+
+# Problem: Calendar Booking System without Sorting
+# Description: Implement a class `MyCalendar` that allows booking events without sorting the list of events. 
+# Each event has a start and end time. The `book` method should return True if the event can be booked without 
+# overlapping with any previously booked event, and False otherwise.
+
+class MyCalendar:
+    def __init__(self):
+        """
+        Initializes an empty list to store booked events.
+        """
+        self.event = []
+        
+    def book(self, start: int, end: int) -> bool:
+        """
+        Books an event if it does not overlap with any existing event.
+
+        :param start: int, the start time of the event.
+        :param end: int, the end time of the event (non-inclusive).
+        :return: bool, True if the event can be booked, False otherwise.
+        """
+        # Check for overlap with existing events
+        for s, e in self.event:
+            if e > start and end > s:
+                return False
+        # If no overlap, book the event
+        self.event.append([start, end])
+        return True
+
+## Time Complexity: O(N), where N is the number of booked events.
+## Space Complexity: O(N), where N is the number of booked events stored.
+
+# Example usage:
+# my_calendar = MyCalendar()
+# print(my_calendar.book(10, 20))  # Expected output: True, first booking
+# print(my_calendar.book(15, 25))  # Expected output: False, overlaps with the previous booking
+# print(my_calendar.book(20, 30))  # Expected output: True, no overlap with existing bookings
+
